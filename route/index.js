@@ -17,5 +17,7 @@ router.post('/sign_in',passport.authenticate('local',{failureRedirect: '/'}),emp
 router.use('/employee',require('./employeedashboard'));
 // Interview
 router.use('/student',require('./interview'));
+// Jobs 
+router.use('/job',require('./job'));
 
 module.exports = router;
