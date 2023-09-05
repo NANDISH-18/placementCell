@@ -19,5 +19,7 @@ router.use('/employee',require('./employeedashboard'));
 router.use('/student',require('./interview'));
 // Jobs 
 router.use('/job',require('./job'));
+// result
+router.use('/result',require('./result'));
 
 module.exports = router;

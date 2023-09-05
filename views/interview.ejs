@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="/css/interview.css">
 <nav>
     <a href="/employee/dashboard">Home</a>
 </nav>
@@ -11,6 +11,18 @@
                 <th>Company Name</th>
                 <th>Action</th>
             </tr>
+            <% for (var i=0; i<interview_list.length;i++) {%>
+                <tr>
+                    <td>
+                        <%=i+1%>
+
+                    </td>
+                    <td>
+                        <%=interview_list[i].companyName%>
+                    </td>
+                    <td><button><a href="/result/<%= interview_list[i].id%>">Mark Result</a></button></td>
+                </tr>
+            <%}%>
         </table>
     </div>
 </section>
