@@ -13,6 +13,9 @@ router.get('/',employee.signInPage);
 // sign in
 router.post('/sign_in',passport.authenticate('local',{failureRedirect: '/'}),employee.signIn);
 
+// Sign out
+router.get('/destroy_session',employee.signOut);
+
 // employeeDashboard
 router.use('/employee',require('./employeedashboard'));
 // Interview

@@ -100,3 +100,16 @@ module.exports.createSession = async function(req,res){
         }
    
 }
+
+// sign out
+module.exports.signOut = async function(req, res) {
+    req.logout(function(err) {
+        if (err) {
+            // Handle any errors that occurred during logout
+            return res.redirect('/'); // Redirect to the desired URL or handle the error as needed
+        }
+        
+        // Logout was successful, you can now redirect the user
+        return res.redirect('/'); // Redirect to the desired URL after successful logout
+    });
+}
